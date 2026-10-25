@@ -13,7 +13,4 @@ export default defineConfig({
     },
   },
   plugins: [tailwindcss(), viteReact()],
-  define: {
-    basename: '/'
-  }
 })
