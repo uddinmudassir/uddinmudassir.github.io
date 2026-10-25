@@ -1,9 +1,24 @@
 const CONTACT_ITEMS = [
-  { label: 'Email', value: 'uddinmudassir10@gmail.com', href: 'mailto:uddinmudassir10@gmail.com' },
-  { label: 'Linkedin', value: 'mudassir-uddin-15177b446', href: 'https://www.linkedin.com/in/mudassir-uddin-15177b446' },
-  { label: 'Location', value: 'Lucknow, Uttar Pradesh, India', href: null },
-  { label: 'Languages', value: 'English · Hindi', href: null },
-]
+  {
+    label: "Email",
+    value: "uddinmudassir10@gmail.com",
+    href: "mailto:uddinmudassir10@gmail.com",
+    newTab: false,
+  },
+  {
+    label: "Linkedin",
+    value: "mudassir-uddin-15177b446",
+    href: "https://www.linkedin.com/in/mudassir-uddin-15177b446",
+    newTab: true,
+  },
+  {
+    label: "Github",
+    value: "uddinmudassir.github.io",
+    href: "https://uddinmudassir.github.io/",
+    newTab: true,
+  },
+  { label: "Languages", value: "English · Hindi", href: null, newTab: false },
+];
 
 export function Contact() {
   return (
@@ -17,7 +32,8 @@ export function Contact() {
         </div>
         <div className="md:col-span-9">
           <p className="text-[1.15rem] md:text-[1.35rem] font-light leading-[1.7] mb-12 max-w-[560px]">
-            Open to new opportunities and collaborations. Feel free to reach out.
+            Open to new opportunities and collaborations. Feel free to reach
+            out.
           </p>
 
           <div>
@@ -33,6 +49,8 @@ export function Contact() {
                   <a
                     href={href}
                     className="text-[0.95rem] text-[#1a1a1a] no-underline border-b border-transparent hover:border-[#1a1a1a] transition-colors duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {value}
                   </a>
@@ -55,5 +73,5 @@ export function Contact() {
         </span>
       </div>
     </section>
-  )
+  );
 }
